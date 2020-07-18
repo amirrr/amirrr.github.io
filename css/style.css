@@ -1,0 +1,142 @@
+header {
+    padding-top: 80px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background:lightgrey;
+    
+}
+
+
+#main {
+    max-width: 1000px;
+    margin: 0 auto;
+    
+}
+
+.wrapper {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.title {
+    width: 50%;
+    float: left;
+}
+
+.title h1 {
+    font-family: helvetica, serif;
+    font-size: 2em;
+}
+
+.title h3 {
+    margin-top: 0.5em;
+    font-family: helvetica, serif;
+    font-size: 1em;
+}
+
+.underline {
+    clear: both;
+    /* float: left; */
+    width: 10em;
+    height: 3px;
+    background: #222;
+    border-top: 1px solid #8A8A8A;
+}
+
+.navbar {
+    width: 50%;
+    float: right;
+    text-align: right;
+    list-style: none;
+    line-height: 1.65;
+    margin-top: 10px;
+}
+
+.navbar li a {
+    color: #000;
+    border-bottom: 1px solid #000;
+    text-decoration: none;
+    line-height: 1.5;
+    padding-bottom: 1px;
+}
+
+.header-title {
+    font-weight: 700;
+    font-size: medium;
+    border-bottom: 2px solid black;
+    width: 5em;
+}
+
+.blog-title {
+    max-width: 1000px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 2em;
+    padding: 0 40px;
+}
+
+
+.container {
+    position:relative;
+    box-sizing:border-box;
+    width:100%;
+    height:auto;
+    padding:0 40px;
+    padding-top: 1rem;
+}
+
+.entry-year {
+    overflow: hidden;
+    font-family: helvetica, serif;
+    margin-bottom: 0.5rem;
+    
+}
+
+.entry-year h2 {
+    margin-top: 0.5em;
+    font-family: helvetica, serif;
+    font-size: 1em;
+    width: 100%; 
+    text-align: left; 
+    border-bottom: 1px solid #000; 
+    padding-top: 1rem;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+}
+ 
+.entry-year h2 span { 
+    background: lightgrey; 
+    padding:0 5px 0px 0px; 
+}
+    
+.entry{
+    display:block;
+    box-sizing:border-box;
+    border-bottom:1px dotted black;
+    padding:0;
+    height:1rem;
+    margin-bottom:1rem
+}
+    
+p{
+    display:inline-block;
+    font-size:1rem;
+    margin:0;
+    background:lightgrey;
+}
+    
+.post-title {
+    float:left; 
+    padding-right:5px;
+}
+    
+.post-date {
+    float:right; 
+    padding-left:5px;
+} 
