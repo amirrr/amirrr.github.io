@@ -140,3 +140,25 @@ p{
     float:right; 
     padding-left:5px;
 } 
+
+:root {
+    --mainColor: #475e70;
+  }
+  
+a {
+    background:
+        linear-gradient(
+            to bottom, var(--mainColor) 0%,
+            var(--mainColor) 100%
+        );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 0px;
+    color: #000;
+    text-decoration: none;
+    transition: background-size .2s;
+}
+  
+a:hover {
+    background-size: 4px 50px;
+}
