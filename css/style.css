@@ -123,6 +123,11 @@ body {
     height:1rem;
     margin-bottom:1rem
 }
+
+.entry:hover {
+    text-decoration: underline;
+    border-bottom:2px solid black;
+}
     
 p{
     display:inline-block;
@@ -145,9 +150,7 @@ p{
     --mainColor: #a7a7a7;
   }
   
-.txt:hover {
-    text-decoration: underline;
-}
+
 
 a {
     background:
