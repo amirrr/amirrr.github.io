@@ -125,8 +125,12 @@ body {
 }
 
 .entry:hover {
-    text-decoration: underline;
     border-bottom:2px solid black;
+}
+
+.entry:hover p {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
     
 p{
