@@ -1,0 +1,5 @@
+baseURL = 'https://amirrr.github.io/'
+languageCode = 'en-us'
+title = 'Amir N. Blog'
+
+theme='contrast-hugo'
