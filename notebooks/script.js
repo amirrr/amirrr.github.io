@@ -44,7 +44,7 @@ var simulation = d3.forceSimulation()
     .force("center", d3.forceCenter(width / 2, height / 2));
 
 // load the graph
-d3.json("mention_network.json", function(error, graph) {
+d3.json("https://raw.githubusercontent.com/amirrr/amirrr.github.io/master/notebooks/mention_network.json", function(error, graph) {
     // set the nodes
     var nodes = graph.nodes;
     // links between nodes
