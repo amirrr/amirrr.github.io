@@ -1,5 +1,5 @@
 // dimensions
-var width = 1000;
+var width = 800;
 var height = 1000;
 
 var margin = {
@@ -36,15 +36,15 @@ var simulation = d3.forceSimulation()
         }))
     // push nodes apart to space them out
     .force("charge", d3.forceManyBody()
-        .strength(-200))
+        .strength(-100))
     // add some collision detection so they don't overlap
     .force("collide", d3.forceCollide()
-        .radius(30))
+        .radius(60))
     // and draw them around the centre of the space
     .force("center", d3.forceCenter(width / 2, height / 2));
 
 // load the graph
-d3.json("https://raw.githubusercontent.com/amirrr/amirrr.github.io/master/notebooks/mention_network.json", function(error, graph) {
+d3.json("mention_network.json", function(error, graph) {
     // set the nodes
     var nodes = graph.nodes;
     // links between nodes
@@ -89,7 +89,7 @@ d3.json("https://raw.githubusercontent.com/amirrr/amirrr.github.io/master/notebo
     // hover text for the node
     node.append("title")
         .text(function(d) {
-            return d.twitter;
+            return "player_api_id : " + d.api_id;
         });
 
     // add a label to each node
