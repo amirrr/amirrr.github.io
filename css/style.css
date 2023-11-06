@@ -207,7 +207,7 @@ a:hover {
 
 /* posts single page */
 #single {
-  max-width: 680px;
+  max-width: 900px;
   margin: 60px auto 0 auto;
   padding: 0 64px;
 }
@@ -323,10 +323,16 @@ a:hover {
   background: #fcfcfc;
 }
 
-.content h1,
-h2,
-h3 {
-  font-weight: 400;
+.content h1 {
+  font-weight: 700;
+}
+
+.content h2 {
+  font-weight: 600;
+}
+
+.content h3 {
+  font-weight: 500;
 }
 
 .content p {
@@ -361,6 +367,7 @@ h3 {
 .content .highlight {
   max-width: 100%;
   overflow-x: auto;
+  margin-bottom: 1.5em;
 }
 .content p code {
   font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;

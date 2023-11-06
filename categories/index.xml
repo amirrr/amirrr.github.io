@@ -5,6 +5,34 @@
     <link>https://amirrr.github.io/categories/</link>
     <description>Recent content in Categories on Amir N.</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://amirrr.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Nov 2023 16:04:14 +0100</lastBuildDate><atom:link href="https://amirrr.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Capability</title>
+      <link>https://amirrr.github.io/categories/capability/</link>
+      <pubDate>Mon, 06 Nov 2023 16:04:14 +0100</pubDate>
+      
+      <guid>https://amirrr.github.io/categories/capability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Equality</title>
+      <link>https://amirrr.github.io/categories/equality/</link>
+      <pubDate>Mon, 06 Nov 2023 16:04:14 +0100</pubDate>
+      
+      <guid>https://amirrr.github.io/categories/equality/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Utilitarianism</title>
+      <link>https://amirrr.github.io/categories/utilitarianism/</link>
+      <pubDate>Mon, 06 Nov 2023 16:04:14 +0100</pubDate>
+      
+      <guid>https://amirrr.github.io/categories/utilitarianism/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
