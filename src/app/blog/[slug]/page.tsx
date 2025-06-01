@@ -14,7 +14,8 @@ export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const post = posts.find((p) => p.slug === params.slug);
+  const awaitedParams = await params;
+  const post = posts.find((p) => p.slug === awaitedParams.slug);
 
   if (!post) {
     return {
@@ -41,8 +42,13 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = posts.find((p) => p.slug === params.slug);
+export default async function BlogPostPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const awaitedParams = await params;
+  const post = posts.find((p) => p.slug === awaitedParams.slug);
 
   if (!post) {
     notFound();
