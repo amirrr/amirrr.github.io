@@ -1,0 +1,213 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 200 20% 96%; /* Very Light Cool Gray #F4F7F7 */
+    --foreground: 200 10% 15%; /* Dark Cool Gray #212629 */
+
+    --muted: 200 20% 88%; /* Light Gray #DAE0E0 */
+    --muted-foreground: 200 10% 45%; /* Medium Gray #69737A */
+
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 200 10% 15%; /* Dark Cool Gray */
+
+    --card: 200 20% 98%; /* Almost White, slightly cool #FAFCFC */
+    --card-foreground: 200 10% 15%; /* Dark Cool Gray */
+
+    --border: 200 15% 85%; /* Light Gray Border #D2DADC */
+    --input: 200 15% 85%; /* Light Gray Input Background */
+
+    --primary: 200 10% 25%; /* Darker Cool Gray for primary elements #353C41 */
+    --primary-foreground: 0 0% 98%; /* Off-White for text on primary */
+
+    --secondary: 200 15% 90%; /* Lighter Cool Gray #E1E7E7 */
+    --secondary-foreground: 200 10% 25%; /* Darker Cool Gray */
+
+    --accent: 200 10% 35%; /* Medium Dark Cool Gray for accents #4F5960 */
+    --accent-foreground: 0 0% 98%; /* Off-White for text on accent */
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --ring: 200 10% 35%; /* Accent color for focus rings */
+
+    --radius: 0.3rem; /* Slightly reduced radius for a sharper look */
+    --radius-sm: calc(var(--radius) - 2px); /* for rounded-sm */
+
+    /* Updated font definitions */
+    --font-sans: Helvetica, Arial, sans-serif; /* Updated to Helvetica stack */
+    --font-serif: var(--font-lora); /* From Lora import in layout.tsx */
+    --font-mono: var(
+      --font-geist-mono
+    ); /* From GeistMono import in layout.tsx */
+  }
+
+  .dark {
+    /* Keeping dark mode variables simple and inverted from light */
+    --background: 200 10% 15%; /* Dark Cool Gray */
+    --foreground: 200 20% 90%; /* Light Cool Gray */
+
+    --muted: 200 10% 25%;
+    --muted-foreground: 200 15% 65%;
+
+    --popover: 200 10% 10%;
+    --popover-foreground: 200 20% 90%;
+
+    --card: 200 10% 12%;
+    --card-foreground: 200 20% 90%;
+
+    --border: 200 10% 30%;
+    --input: 200 10% 30%;
+
+    --primary: 200 20% 80%; /* Lighter primary for dark mode */
+    --primary-foreground: 200 10% 10%;
+
+    --secondary: 200 10% 20%;
+    --secondary-foreground: 200 20% 90%;
+
+    --accent: 200 15% 70%; /* Lighter accent for dark mode */
+    --accent-foreground: 200 10% 10%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+
+    --ring: 200 15% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans); /* Apply Helvetica stack by default */
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif; /* Apply Lora for headings */
+  }
+}
+
+@layer components {
+  /* Navigation link animation styles */
+  .animated-nav-link {
+    position: relative;
+    display: inline-block; /* Crucial for ::after to size to text content */
+    overflow: hidden; /* Clips the ::after pseudo-element */
+    /* rounded-sm is applied via Tailwind class directly on the span now */
+    /* z-index: 0; not strictly needed if ::after is -1 */
+  }
+
+  .animated-nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0; /* Animates to 100% */
+    background-color: hsl(var(--accent)); /* Background color for animation */
+    transition: height 0.2s ease-out;
+    z-index: -1; /* Sits behind the text content of .animated-nav-link span if needed, though overflow:hidden handles clipping */
+    border-radius: inherit; /* Inherits border-radius from .animated-nav-link span if needed, though overflow:hidden handles clipping */
+  }
+
+  .animated-nav-link:hover::after {
+    height: 100%;
+  }
+}
+
+@layer utilities {
+  .fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  /* Minimalist Markdown Styling */
+  .markdown-content {
+    @apply prose prose-neutral dark:prose-invert max-w-none;
+    /* Adjusted prose text sizes */
+    --tw-prose-body: hsl(var(--foreground));
+    --tw-prose-headings: hsl(var(--foreground));
+    --tw-prose-lead: hsl(var(--muted-foreground));
+    --tw-prose-links: hsl(var(--primary));
+    --tw-prose-bold: hsl(var(--foreground));
+    --tw-prose-counters: hsl(var(--muted-foreground));
+    --tw-prose-bullets: hsl(var(--muted-foreground));
+    --tw-prose-hr: hsl(var(--border));
+    --tw-prose-quotes: hsl(var(--foreground));
+    --tw-prose-quote-borders: hsl(var(--border));
+    --tw-prose-captions: hsl(var(--muted-foreground));
+    --tw-prose-code: hsl(var(--primary));
+    --tw-prose-pre-code: hsl(var(--primary-foreground));
+    --tw-prose-pre-bg: hsl(var(--primary));
+    --tw-prose-th-borders: hsl(var(--border));
+    --tw-prose-td-borders: hsl(var(--border));
+
+    /* Dark mode overrides for prose */
+    --tw-prose-invert-body: hsl(var(--foreground));
+    --tw-prose-invert-headings: hsl(var(--foreground));
+    --tw-prose-invert-lead: hsl(var(--muted-foreground));
+    --tw-prose-invert-links: hsl(var(--primary));
+    --tw-prose-invert-bold: hsl(var(--foreground));
+    --tw-prose-invert-counters: hsl(var(--muted-foreground));
+    --tw-prose-invert-bullets: hsl(var(--muted-foreground));
+    --tw-prose-invert-hr: hsl(var(--border));
+    --tw-prose-invert-quotes: hsl(var(--foreground));
+    --tw-prose-invert-quote-borders: hsl(var(--border));
+    --tw-prose-invert-captions: hsl(var(--muted-foreground));
+    --tw-prose-invert-code: hsl(var(--primary));
+    --tw-prose-invert-pre-code: hsl(var(--primary-foreground));
+    --tw-prose-invert-pre-bg: hsl(var(--primary));
+    --tw-prose-invert-th-borders: hsl(var(--border));
+    --tw-prose-invert-td-borders: hsl(var(--border));
+  }
+
+  .markdown-content h1 {
+    @apply text-2xl md:text-3xl font-bold mt-6 mb-3; /* Reduced size, mt, mb */
+  }
+  .markdown-content h2 {
+    @apply text-xl md:text-2xl font-semibold mt-5 mb-2.5; /* Reduced size, mt, mb */
+  }
+  .markdown-content h3 {
+    @apply text-lg md:text-xl font-semibold mt-4 mb-2; /* Reduced size, mt, mb */
+  }
+  .markdown-content p {
+    @apply mb-3 leading-relaxed text-sm md:text-base; /* Reduced size, mb */
+  }
+  .markdown-content a {
+    @apply hover:underline;
+  }
+  .markdown-content ul,
+  .markdown-content ol {
+    @apply mb-3 pl-4 list-inside; /* Reduced mb, pl */
+  }
+  .markdown-content li {
+    @apply mb-0.5; /* Reduced mb */
+  }
+  .markdown-content blockquote {
+    @apply pl-3 italic my-3 text-muted-foreground; /* Reduced pl, my */
+  }
+  .markdown-content pre {
+    @apply p-3 rounded-md overflow-x-auto my-3 text-xs; /* Reduced p, my, text size */
+  }
+  .markdown-content code:not(pre > code) {
+    @apply px-1 py-0.5 rounded-sm text-xs bg-muted text-primary; /* Reduced text size */
+  }
+}
