@@ -3,7 +3,7 @@ import { siteConfig } from "@/config/site";
 
 const navLinks = [
   { name: "About", href: "/" },
-  { name: "Posts", href: "/blog" },
+  { name: "Posts", href: "/posts" },
   { name: "Research", href: "/research" },
 ];
 

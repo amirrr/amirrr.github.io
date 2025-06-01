@@ -55,7 +55,7 @@ export default function BlogListPage() {
                 {postsByYear[year].map((post) => (
                   <li key={post.slug}>
                     <Link
-                      href={`/blog/${post.slug}`}
+                      href={`/posts/${post.slug}`}
                       className="group flex items-baseline justify-between py-1.5 text-foreground hover:text-primary transition-colors"
                     >
                       <span className="text-sm group-hover:underline truncate mr-3">

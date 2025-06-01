@@ -63,9 +63,9 @@ To update it:
 2.  Update the `SiteConfig.profileImage` prop of the `Image` component in `src/config/site.ts`.
 3.  Also, update `siteConfig.profileImageAlt` in `src/config/site.ts` with appropriate alt text.
 
-### 3. Blog Posts (`src/app/blog/data.ts`)
+### 3. Blog Posts (`src/app/posts/data.ts`)
 
-Blog posts are managed in `src/app/blog/data.ts`. Each post is an object in the `posts` array with the following structure:
+Blog posts are managed in `src/app/posts/data.ts`. Each post is an object in the `posts` array with the following structure:
 
 ```typescript
 export interface Post {
@@ -80,7 +80,7 @@ export interface Post {
 
 - To add a new post, create a new object in the `posts` array.
 - Use Markdown for the `content`.
-- The `slug` will be part of the URL (e.g., `/blog/your-slug-here`).
+- The `slug` will be part of the URL (e.g., `/posts/your-slug-here`).
 
 ### 4. Research Items (`src/app/research/data.ts`)
 

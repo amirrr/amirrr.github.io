@@ -58,7 +58,7 @@ export default async function BlogPostPage({
     <article className="max-w-3xl mx-auto fade-in py-6 md:py-10">
       <div className="mb-4">
         <Link
-          href="/blog"
+          href="/posts"
           className="text-xs text-muted-foreground hover:text-primary inline-flex items-center underline underline-offset-2 decoration-1 transition-colors duration-150 ease-in-out"
         >
           <ArrowLeft className="mr-1.5 h-3.5 w-3.5" />
