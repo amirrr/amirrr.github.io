@@ -10,9 +10,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-sans)"], // Updated to use --font-sans (Helvetica stack)
-        serif: ["var(--font-serif)"], // Updated to use --font-serif (Lora)
-        mono: ["var(--font-mono)"], // Updated to use --font-mono (GeistMono)
+        sans: ["var(--font-sans)"],
+        serif: ["var(--font-serif)"],
+        mono: ["var(--font-mono)"],
       },
       colors: {
         background: "hsl(var(--background))",

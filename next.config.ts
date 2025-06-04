@@ -7,7 +7,7 @@ let assetPrefix_config: string | undefined = undefined;
 let basePath_config: string | undefined = undefined;
 
 if (isGithubActions) {
-  const repository = process.env.GITHUB_REPOSITORY; // Format: owner/repo
+  const repository = process.env.GITHUB_REPOSITORY;
   if (repository) {
     const owner = repository.split("/")[0];
     const repoName = repository.split("/")[1];
@@ -20,8 +20,6 @@ if (isGithubActions) {
       assetPrefix_config = `/${repoName}/`;
       basePath_config = `/${repoName}`;
     }
-    // If it IS a user/org page (e.g., repoName is 'owner.github.io'),
-    // basePath_config and assetPrefix_config remain undefined, so it's served from the root.
   }
 }
 
