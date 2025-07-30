@@ -117,14 +117,7 @@ export default function HomePage() {
         </h2>
         <div className="text-sm sm:text-base text-muted-foreground space-y-1.5">
           <p>
-            <strong>Email: </strong>
-            <Image
-              src={"/images/email.png"}
-              alt="email"
-              width={277}
-              height={17}
-              className="inline-block"
-            />
+            <strong>Email: </strong>contact [at] nakhaei [dot] me
           </p>
           {siteConfig.university && (
             <p>
