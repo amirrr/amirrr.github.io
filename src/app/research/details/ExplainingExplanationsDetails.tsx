@@ -3,6 +3,7 @@ import MarkdownRenderer from "@/components/MarkdownRenderer";
 import type { ResearchDetailProps } from "@/app/research/components/ResearchCard";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
+import ExplanationStyleExplorer from "./components/ExplanationStyleExplorer";
 
 export default function ExplainingExplanationsDetails({
   markdownContent,
@@ -36,6 +37,8 @@ export default function ExplainingExplanationsDetails({
           </div>
         </section>
       )}
+
+      <ExplanationStyleExplorer />
     </div>
   );
 }
