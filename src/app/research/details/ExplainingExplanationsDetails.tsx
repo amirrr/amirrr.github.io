@@ -1,6 +1,5 @@
 "use client";
 import MarkdownRenderer from "@/components/MarkdownRenderer";
-import { Button } from "@/components/ui/button";
 import type { ResearchDetailProps } from "@/app/research/components/ResearchCard";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
@@ -37,23 +36,6 @@ export default function ExplainingExplanationsDetails({
           </div>
         </section>
       )}
-
-      <div className="mt-6 p-4 border border-dashed rounded-md bg-muted/30">
-        <h4 className="text-sm font-semibold font-serif text-foreground mb-2">
-          Explanation Style Visualizer (Placeholder)
-        </h4>
-        <p className="text-xs text-muted-foreground mb-3">
-          This section can host custom React components for interactive
-          visualizations or tools related to analyzing explanation styles.
-        </p>
-        <Button
-          size="sm"
-          variant="outline"
-          onClick={() => alert("Interactivity for Explaining Explanations!")}
-        >
-          Example Interaction
-        </Button>
-      </div>
     </div>
   );
 }

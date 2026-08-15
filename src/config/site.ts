@@ -43,9 +43,14 @@ export const siteConfig: SiteConfig = {
   ],
   newsItems: [
     {
+      date: "July 2026",
+      content:
+        "Presented our work on <a class='underline' href='/research'>systematic preferences among causal explanations of spurious correlations</a> at the International Conference on Computational Social Science (IC2S2 2026) in Burlington, VT.",
+    },
+    {
       date: "July 2025",
       content:
-        "Doing a tutorial on our research cartography platfrom <a class='underline' target='_blank' href='https://atlas.seas.upenn.edu'>Atlas</a> at the International Conference on Computational Social Science (IC2S2 2025) in Norrköping.",
+        "Doing a tutorial on our research cartography platform <a class='underline' target='_blank' href='https://atlas.seas.upenn.edu'>Atlas</a> at the International Conference on Computational Social Science (IC2S2 2025) in Norrköping.",
     },
     {
       date: "July 2024",

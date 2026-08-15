@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import MarkdownRenderer from "@/components/MarkdownRenderer";
 import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -122,40 +121,6 @@ export default function GlobalCommonSenseStudyDetails({
           ))}
         </div>
       </section>
-
-      {/* <section>
-        <h3 className="text-lg font-semibold font-serif text-foreground mb-3">
-          Common Sense Distributions (Illustrative)
-        </h3>
-        <div className="grid md:grid-cols-2 gap-4">
-          <div className="p-3 border rounded-md bg-muted/30">
-            <Image
-              src="https://placehold.co/600x400.png"
-              alt="Placeholder for common sense distribution chart 1"
-              width={600}
-              height={400}
-              className="rounded shadow"
-              data-ai-hint="distribution chart"
-            />
-            <p className="text-xs text-muted-foreground mt-2 text-center">
-              Illustrative Plot 1: Perceived Commonality of Statements
-            </p>
-          </div>
-          <div className="p-3 border rounded-md bg-muted/30">
-            <Image
-              src="https://placehold.co/600x400.png"
-              alt="Placeholder for common sense distribution chart 2"
-              width={600}
-              height={400}
-              className="rounded shadow"
-              data-ai-hint="agreement chart"
-            />
-            <p className="text-xs text-muted-foreground mt-2 text-center">
-              Illustrative Plot 2: Agreement on Common Sense
-            </p>
-          </div>
-        </div>
-      </section> */}
 
       <section className="p-4 border border-dashed rounded-md bg-card">
         <h3 className="text-lg font-semibold font-serif text-foreground mb-4">
